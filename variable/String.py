@@ -12,7 +12,7 @@ full_name = f"{first_name} {last_name}"
 print(f"Hello, {full_name.title()}!")
 
 # f字符是Python3.6引入的，Python3.5或更早的版本需要使用format()方法。
-full_name = "{} {}".format(first_name, last_name);
+full_name = "{} {}".format(first_name, last_name)
 print(f"Hello, {full_name}!")
 
 print("\tPython")
