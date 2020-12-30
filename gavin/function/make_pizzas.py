@@ -3,7 +3,7 @@
 
 from pizza import make_pizza
 import person
-import function as fu
+from gavin import function as fu
 from formatted_name import get_formatted_name as name
 from greeter import *
 
