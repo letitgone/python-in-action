@@ -15,7 +15,7 @@ role_ids = cur.fetchmany(row)  # 返回数据,返回的是tuple类型
 for role_id in role_ids:
     print(role_id['id'])
     insert = cur.execute(
-        "INSERT INTO ghac.`role_function` ( `function_id`, `role_id`, `created_at` ) " \
+        "INSERT INTO ghac.`role_function` ( `function_id`, `role_id`, `created_at` ) "
         "SELECT id, %s, now() FROM ghac.functions WHERE identify = 'administrator';",
         role_id['id'])
 cur.close()
