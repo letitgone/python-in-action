@@ -17,9 +17,9 @@ cur.execute(service_request_query)
 service_request_list = cur.fetchall()
 for service_request in service_request_list:
     service_request_attributes = dict(service_request).get('service_request_attributes')
-    if ('categoryName' in dict(service_request)) and ('numberClaim' in dict(
-            service_request)) and ('assetCategoryName' in dict(
-        service_request)) and ('assetCategoryId' in dict(service_request)):
+    condition = json.loads(service_request_attributes)
+    if ('categoryName' in condition) and ('numberClaim' in condition) and (
+            'assetCategoryName' in condition) and ('assetCategoryId' in condition):
         service_request_attributes = json.loads(service_request_attributes)
         del service_request_attributes['categoryName']
         assetCategoryId = service_request_attributes.pop('assetCategoryId')
