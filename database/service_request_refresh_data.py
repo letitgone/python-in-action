@@ -25,12 +25,13 @@ for service_request in service_request_list:
         assetCategoryId = service_request_attributes.pop('assetCategoryId')
         numberClaim = service_request_attributes.pop('numberClaim')
         assetCategoryName = service_request_attributes.pop('assetCategoryName')
-        assetCategory = {
+        assetCategoryDict = {
             'assetCategoryId': assetCategoryId,
             'numberClaim': numberClaim,
             'assetCategoryName': assetCategoryName
         }
-        service_request_attributes['assetCategory'] = json.loads(json.dumps(assetCategory))
+        assetCategoryList = [assetCategoryDict]
+        service_request_attributes['assetCategory'] = json.loads(json.dumps(assetCategoryList))
         service_request_attributes = json.dumps(service_request_attributes)
         update_rows = cur.execute(
             "update service_request set service_request_attributes = %s where service_request_id = %s",
