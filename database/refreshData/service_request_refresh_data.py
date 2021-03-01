@@ -12,7 +12,8 @@ conn = pymysql.connect(host='114.115.207.20', port=3506, user='root', passwd='Se
                        db='qhdbank', charset='utf8')
 cur = conn.cursor(DictCursor)
 
-service_request_query = "select sr.* from service_request sr LEFT JOIN service s on sr.service_id = s.service_id where s.template_code = 'AssetClaim';"
+service_request_query = "select sr.* from service_request sr LEFT JOIN service s on sr.service_id " \
+                        "= s.service_id where s.template_code = 'AssetClaim' "
 cur.execute(service_request_query)
 service_request_list = cur.fetchall()
 for service_request in service_request_list:
@@ -34,7 +35,8 @@ for service_request in service_request_list:
         service_request_attributes['assetCategory'] = json.loads(json.dumps(assetCategoryList))
         service_request_attributes = json.dumps(service_request_attributes)
         update_rows = cur.execute(
-            "update service_request set service_request_attributes = %s where service_request_id = %s",
+            "update service_request set service_request_attributes = %s where service_request_id "
+            "= %s",
             (service_request_attributes, dict(service_request).get('service_request_id')))
         print(update_rows)
         print('Update successful!')
