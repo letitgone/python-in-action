@@ -8,7 +8,7 @@ def wake_git_clone(file_path):
     if '.DS_Store' in file_name_list:
         file_name_list.remove('.DS_Store')
     for file_name in file_name_list:
-        git_url = 'git clone -b dev http://zhanggengjia:8_KC1EgstiqzLZHiJzQZ@code.essocloud.com/ifm/' + file_name + '.git;'
+        git_url = 'git clone -b dev http://username:code@localhost/ifm/' + file_name + '.git;'
         print(git_url)
 
 
@@ -17,7 +17,7 @@ def iot_git_clone(file_path):
     if '.DS_Store' in file_name_list:
         file_name_list.remove('.DS_Store')
     for file_name in file_name_list:
-        git_url = 'git clone -b dev http://zhanggengjia:8_KC1EgstiqzLZHiJzQZ@code.essocloud.com/iot-cloud/' + file_name + '.git;'
+        git_url = 'git clone -b dev http://username:code@localhost/iot-cloud/' + file_name + '.git;'
         print(git_url)
 
 

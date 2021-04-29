@@ -21,7 +21,7 @@ page = [1, 2, 3, 4, 5]
 lists = []
 git_list = []
 for i in page:
-    url = 'http://code.essocloud.com/groups/ifm/-/children.json'
+    url = 'localhost/groups/ifm/-/children.json'
     headers = {
         'Cookie': 'sidebar_collapsed=false; event_filter=all; _gitlab_session=49cd7e496dd14f6fc010c85d0f13296f',
         'X-CSRF-Token': 'te4G1M4ZlFoqPkcrH+sWStmPav2lajHkMuMk3Cn8vHvf/OBe5wQcy485xteuAzgBrIKfBwVEiFLu1ID87sJxJg=='
@@ -31,7 +31,7 @@ for i in page:
     }
     response = requests.get(url=url, params=param, headers=headers).json()
     for j in response:
-        url = 'http://code.essocloud.com' + dict(j).get('relative_path') + '.git'
+        url = 'localhost' + dict(j).get('relative_path') + '.git'
         s = url.find('hifm')
         print(f"{url}\n")
         if (url.find('hifm') != -1 or url.find('hifm-server') != -1) and url.find(
@@ -42,9 +42,9 @@ for i in page:
             'hifm-server-supplier-service') == -1 and url.find(
             'hifm-server-budget-service') == -1 and url.find('hifm-server-ifm-api') == -1:
             git_list.append(
-                'http://code.essocloud.com' + dict(j).get('relative_path') + '.git')
+                'localhost' + dict(j).get('relative_path') + '.git')
             git("status")
-            git("clone", 'http://code.essocloud.com' + dict(j).get('relative_path') + '.git', "-b",
+            git("clone", 'localhost' + dict(j).get('relative_path') + '.git', "-b",
                 'dev', local_url + '/' + dict(j).get('name'))
     lists.extend(response)
 print(git_list)
