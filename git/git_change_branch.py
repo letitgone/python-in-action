@@ -19,7 +19,7 @@ if __name__ == '__main__':
     # iot_starter_file_path = '/Users/zhanggj/Downloads/idea-project/iot-starter'
 
     # 租户名
-    # git_tag(hifm_file_path, 'ghac')
+    # git_tag(hifm_file_path, 'dev')
     # git_tag(iot_file_path, 'dev')
     git_tag(wake_starter_file_path, 'dev')
     # git_tag(iot_starter_file_path, 'dev')
