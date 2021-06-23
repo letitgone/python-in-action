@@ -17,6 +17,6 @@ if __name__ == '__main__':
     hifm_file_path = '/Users/zhanggj/Downloads/idea-project/hifm'
     wake_starter_file_path = '/Users/zhanggj/Downloads/idea-project/wake-starter'
     # 租户名
-    git_branch(hifm_file_path, 'huobi', 'pactera')
-    git_branch(wake_starter_file_path, 'huobi', 'pactera')
+    git_branch(hifm_file_path, 'huobi', 'jjccb')
+    git_branch(wake_starter_file_path, 'huobi', 'jjccb')
     print("Success!")
