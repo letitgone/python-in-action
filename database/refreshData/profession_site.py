@@ -42,8 +42,8 @@ tenant_code_list = [
 ]
 
 # for tenant_code in tenant_code_list:
-conn = pymysql.connect(host='localhost', port=3306, user='root', passwd='123456',
-                       db='xz13818840653', charset='utf8')
+conn = pymysql.connect(host='172.16.135.10', port=32000, user='root', passwd='EMTC123456++',
+                       db='pactera', charset='utf8')
 cur = conn.cursor(DictCursor)
 
 profession_site_update_query = 'update profession_site set profession_type = 0 where 1 = 1'
