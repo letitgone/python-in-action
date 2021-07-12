@@ -20,14 +20,14 @@ if __name__ == '__main__':
     # iot_starter_file_path = '/Users/zhanggj/Downloads/idea-project/iot-starter'
 
     # imac
-    hifm_file_path = '/Users/zhanggj/Downloads/idea-projects/hifm'
+    # hifm_file_path = '/Users/zhanggj/Downloads/idea-projects/hifm'
     # iot_file_path = '/Users/zhanggj/Downloads/idea-project/iot'
-    # wake_starter_file_path = '/Users/zhanggj/Downloads/idea-project/wake-starter'
+    wake_starter_file_path = '/Users/zhanggj/Downloads/idea-projects/wake-starter'
     # iot_starter_file_path = '/Users/zhanggj/Downloads/idea-project/iot-starter'
 
     # 租户名
     # change_branch(hifm_file_path, 'dev')
     # change_branch(iot_file_path, 'dev')
-    change_branch(hifm_file_path, 'dev')
+    change_branch(wake_starter_file_path, 'dev')
     # change_branch(iot_starter_file_path, 'dev')
     print("Success!")
