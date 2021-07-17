@@ -14,7 +14,7 @@ def change_branch(file_path, now_branch):
 
 
 if __name__ == '__main__':
-    # hifm_file_path = '/Users/zhanggj/Downloads/idea-project/hifm'
+    hifm_file_path = '/Users/zhanggj/Downloads/idea-project/hifm'
     # iot_file_path = '/Users/zhanggj/Downloads/idea-project/iot'
     wake_starter_file_path = '/Users/zhanggj/Downloads/idea-project/wake-starter'
     # iot_starter_file_path = '/Users/zhanggj/Downloads/idea-project/iot-starter'
@@ -26,8 +26,8 @@ if __name__ == '__main__':
     # iot_starter_file_path = '/Users/zhanggj/Downloads/idea-project/iot-starter'
 
     # 租户名
-    # change_branch(hifm_file_path, 'dev')
+    change_branch(hifm_file_path, 'ghac')
     # change_branch(iot_file_path, 'dev')
-    change_branch(wake_starter_file_path, 'release')
+    change_branch(wake_starter_file_path, 'ghac')
     # change_branch(iot_starter_file_path, 'dev')
     print("Success!")
