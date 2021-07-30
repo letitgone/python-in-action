@@ -17,12 +17,6 @@ def git_pull(file_path_project_list):
 
 if __name__ == '__main__':
     file_path_project_list = {
-        '/home/project/java/hifm/',
-        '/home/project/java/iot/',
-        '/home/project/java/iot-starter/',
-        '/home/project/java/oddness-starter/',
-        '/home/project/java/wake-starter/',
-        '/home/project/python/',
-        '/home/project/c/'
+        '/Users/zhanggj/Downloads/idea-project/hifm/'
     }
     git_pull(file_path_project_list)
