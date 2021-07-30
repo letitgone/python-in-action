@@ -19,3 +19,8 @@ class FrenchDeck:
 
     def __getitem__(self, position):
         return self._cards[position]
+
+
+if __name__ == '__main__':
+    deck = FrenchDeck()
+    len(deck)
