@@ -9,7 +9,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 conn = pymysql.connect(host='localhost', port=3306, user='root', passwd='123123',
-                       db='qhdbank', charset='utf8')
+                       db='test', charset='utf8')
 cur = conn.cursor(DictCursor)
 
 service_request_query = "select sr.* from service_request sr LEFT JOIN service s on sr.service_id " \

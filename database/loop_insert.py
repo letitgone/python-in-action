@@ -4,7 +4,7 @@
 import pymysql
 
 conn = pymysql.connect(host='localhost', port=3506, user='root', passwd='123456',
-                       db='hifm_center', charset='utf8')
+                       db='test', charset='utf8')
 cur = conn.cursor(cursor=pymysql.cursors.DictCursor)
 
 role_id_query = "SELECT id FROM ghac.roles WHERE role_code != 'ROLE_001';"

@@ -13,5 +13,5 @@ def wake_maven_deploy(file_path, maven_profile):
 
 
 if __name__ == '__main__':
-    wake_maven_deploy('/Users/zhanggj/Downloads/idea-project/wake-starter/', 'master')
+    wake_maven_deploy('/Users/zhanggj/Downloads/idea-project/wake-starter/', 'dynamic')
     print('Complete!')

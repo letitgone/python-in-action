@@ -1,0 +1,1 @@
+rm -rf /Users/zhanggj/Downloads/development-environment/apache-maven-3.6.3/repository/com/wake
