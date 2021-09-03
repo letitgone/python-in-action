@@ -5,7 +5,7 @@ import cx_Oracle
 
 user_list = ['HIFM_CENTER', 'JJCCB', 'HIFM_NACOS', 'HIFM_XXL_JOB', 'HIFM_FLOWABLE']
 
-oracle_conn = cx_Oracle.connect("root", "123456", "localhost")
+oracle_conn = cx_Oracle.connect("system", "EMTC123456++", "114.115.165.131:1521/cdb2")
 oracle_curs = oracle_conn.cursor()
 
 with open('sequence.sql', 'a') as f:
@@ -25,8 +25,8 @@ with open('sequence.sql', 'a') as f:
         	sequence_owner = '{user}'"
         oracle_curs.execute(select_sequence)
         sequence_rows = oracle_curs.fetchall()
-        print(f'-----------------------------{user} sequence--------------------------')
-        f.write(f'-----------------------------{user} sequence--------------------------\n')
+        print(f'-- ---------------------------{user} sequence--------------------------')
+        f.write(f'-- ---------------------------{user} sequence--------------------------\n')
         for sequence in sequence_rows:
             str_sequence = sequence[0]
             f.write(str_sequence)
