@@ -5,7 +5,7 @@ import cx_Oracle
 
 user_list = ['HIFM_CENTER', 'JJCCB', 'HIFM_NACOS', 'HIFM_XXL_JOB', 'HIFM_FLOWABLE']
 
-oracle_conn = cx_Oracle.connect("system", "EMTC123456++", "114.115.165.131:1521/cdb2")
+oracle_conn = cx_Oracle.connect("root", "123456", "localhost")
 oracle_curs = oracle_conn.cursor()
 
 with open('sequence.sql', 'a') as f:
